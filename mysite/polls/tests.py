@@ -37,6 +37,7 @@ class QuestionModelTests(TestCase):
         time = timezone.now() + datetime.timedelta(days=30)
         future_question = Question(pub_date=time)
         self.assertIs(future_question.was_published_recently(), False)
+
 def create_question(question_text, days):
     """
     Create a question with the given `question_text` and published the
